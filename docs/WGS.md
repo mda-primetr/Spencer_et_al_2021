@@ -21,9 +21,10 @@ The JAMSbeta pipeline will look for sample prefixes present within a column name
 JAMSbeta -p Spencer2021 -y /path/to/folder/with/jamsfiles -t metadata_file.tsv
 ```
 
-This will create an R-session image (.RData) containing [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/html/SummarizedExperiment.html) objects which can be used with the JAMS package plotting functions. 
+This will create an R-session image (.RData) containing [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/html/SummarizedExperiment.html) objects which can be used with the JAMS package plotting functions.
 
+On this paper, shotgun metagenom sequencing of fecal samples was used for evaluating three kinds of samples. Click below for the code used and associated figures in each category:
 
-```R
-library(JAMS)
-```
+[Human samples](docs/WGSHuman.md)
+[Samples from mice from different vendores submitted to different diets](docs/WGSMouseDiet.md)
+[Samples from mice submitted to different probiotics](docs/WGSMouseProbiotics.md)
