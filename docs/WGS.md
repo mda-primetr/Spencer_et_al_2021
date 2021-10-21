@@ -1,4 +1,4 @@
-## Code used for shotgun sequencing analysis of microbiome samples of the Spencer et al (2021) paper
+#Code used for shotgun sequencing analysis of microbiome samples of the Spencer et al (2021) paper
 
 ##Pre-analysis of samples starting from fastqs.
 
