@@ -5,7 +5,8 @@ This repository is for making the code used in the paper "Dietary fiber and prob
 All of the DNA sequencing data has been deposited to the [Sequence Read Archive (SRA)](https://www.ncbi.nlm.nih.gov/sra) of the National Library of Medicine (NLM) at the [National Institutes of Health (NIH)](https://www.nih.gov/), under BioProject accession number [PRJNA770295](https://www.ncbi.nlm.nih.gov/sra/PRJNA770295).
 
 
-Click below for more information on each kind of sequencing analyis:
-[Analysis of shotgun sequencing data](docs/WGS.md)
+Click below for more information on the code and approach used for each kind of sequencing analyis used on the paper:
 
-[Analysis of 16S sequencing data](docs/16S.md)
+### [Analysis of shotgun sequencing data](docs/WGS.md)
+
+### [Analysis of 16S sequencing data](docs/16S.md)
