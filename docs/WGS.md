@@ -25,6 +25,8 @@ This will create an R-session image (.RData) containing [SummarizedExperiment](h
 
 On this paper, shotgun metagenom sequencing of fecal samples was used for evaluating three kinds of samples. Click below for the code used and associated figures in each category:
 
-[Human samples](docs/WGSHuman.md)
-[Samples from mice from different vendores submitted to different diets](docs/WGSMouseDiet.md)
-[Samples from mice submitted to different probiotics](docs/WGSMouseProbiotics.md)
+#### [Human samples](docs/WGSHuman.md)
+
+#### [Samples from mice submitted to different diets](docs/WGSMouseDiet.md)
+
+#### [Samples from mice exposed to different probiotics](docs/WGSMouseProbiotics.md)
