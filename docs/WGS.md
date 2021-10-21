@@ -18,7 +18,7 @@ JAMSalpha -f /path/to/forward/Sample_R1.fastq -r /path/to/reverse/Sample_R2.fast
 The JAMSbeta pipeline will look for sample prefixes present within a column named "Sample" of the metadata file supplied and select the corresponding jamsfiles present within the folder specified following the `-y` argument:
 
 ```bash
-JAMSbeta -p Spencer2021 -y /path/to/folder/with/jamsfiles -t metadata_file.tsv
+JAMSbeta -p Spencer2021 -t metadata_file.tsv -y /path/to/folder/with/jamsfiles
 ```
 
 This will create an R-session image (.RData) containing [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/html/SummarizedExperiment.html) objects which can be used with the JAMS package plotting functions.
