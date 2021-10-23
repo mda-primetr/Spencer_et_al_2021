@@ -134,7 +134,7 @@ dev.off()
 
 
 
-### Code for Supplementary Figure 2 panel E
+### Code for Supplementary Figure 2 panel F
 This will yield an ordination plot using UMAP coloured in by Responders and Non-Responders within all 167 samples, and calculating the PERMANOVA value between these groups.
 
 ```R
@@ -147,3 +147,4 @@ for (pcc in c(FALSE, TRUE)){
 }
 dev.off()
 ```
+[Supplementary Fig S2 F pdf output](../pdfs/Supplementary_Fig_S2_F.pdf)
