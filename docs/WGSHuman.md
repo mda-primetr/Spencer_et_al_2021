@@ -20,6 +20,10 @@ Samples_Validation <- pheno$Sample[intersect(which(pheno$treatment == "anti-PD1"
 #Samples with probiotics information
 Samples_Probiotics <- subset(pheno, probiotics %in% c("Yes", "No"))[]$Sample
 
+#Samples with diet information
+Samples_Fiber <- subset(pheno, fiber_cat %in% c("Insufficient_intake", "Sufficient_intake"))[]$Sample
+
+
 ```
 
 Now that we have these useful objects, we can proceed to actual plotting.
@@ -158,7 +162,7 @@ dev.off()
 
 
 ### Code for Supplementary Figure 5 panel E
-This will plot a heatmap of gene annotation features (gene product name, as annotated by PROKKA) which are significantly (p < 0.05) between patients who took probiotics n=30 and those who did not n=80.
+This will plot a heatmap of gene annotation features (gene product name, as annotated by PROKKA) which are significantly (p < 0.05) different between patients who took probiotics n=30 and those who did not n=80.
 
 ```R
 pdf("Supplementary_Fig_S5_E.pdf", paper = "a4r")
@@ -173,3 +177,15 @@ dev.off()
 ```
 
 [Supplementary Fig S5 E pdf output](../pdfs/Supplementary_Fig_S5_E.pdf)
+
+
+### Code for Supplementary Figure 10 panel E
+This will plot a heatmap of gene annotation features (gene product name, as annotated by PROKKA) which are significantly (p < 0.05) different between patients who report insufficient fiber intake n=71 and those who who reported sufficient fiber intake n=23.
+
+```R
+pdf("Supplementary_Fig_S10_E.pdf", paper = "a4r")
+
+plot_relabund_heatmap(ExpObj = expvec[["Product"]], samplesToKeep = Samples_Fiber, hmtype = "comparative", compareby = "fiber_cat", invertbinaryorder = TRUE, splitcolsby = "fiber_cat", column_split_group_order = c("Insufficient_intake", "Sufficient_intake"), colcategories = "fiber_cat", featcutoff = c(50, 20), minl2fc = 1, fun_for_l2fc = "geom_mean", showonlypbelow = 0.05, scaled = FALSE, cdict = cdict, class_to_ignore = "N_A", no_underscores = TRUE)
+
+dev.off()
+```
