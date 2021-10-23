@@ -52,7 +52,9 @@ for (Wanted_Samples_object_name in c("Samples_All", "Samples_antiPD1")){
     #Create an empty list to hold the stats of difference between clinical response at each taxonomic level.
     Volcano_Stats_list <- list()
 
-    #We will use the plot_relabund_heatmap function of JAMS to return a dataframe with the stats for comparison within each group by setting the argument returnstats=TRUE. As as the function produces heatmaps, we might as well dump them into the pdf, although these heatmaps were not included on the paper.
+    #We will use the plot_relabund_heatmap function of JAMS to return a dataframe with the stats for comparison
+    #within each group by setting the argument returnstats=TRUE. As as the function produces heatmaps, we might as well
+    #dump them into the pdf, although these heatmaps were not included on the paper.
 
     #loop through each taxonomic level
     for (glmby in c("LKT", "Genus", "Family", "Class", "Order", "Phylum")){
@@ -69,7 +71,10 @@ for (Wanted_Samples_object_name in c("Samples_All", "Samples_antiPD1")){
     Volcano_Stats$Taxon <- rownames(Volcano_Stats)
     Volcano_Stats <- Volcano_Stats[ , c("Taxon", "Taxonomic_level", "pval", "padj_fdr", "l2fc", "absl2fc", "MedianGenomeComp", "SDGenomeComp")]
 
-    #Make taxon names clearer, as JAMS deals with "Last Known Taxon" at its most granular level, so LKT__g__Clostridium means "a species, which is unknown at the species level, but belongs to the Clostridium genus". This is not to be confused with the feature g__Clostridium, which is the sum of all LKT features which belong to the genus Clostridium.
+    #Make taxon names clearer, as JAMS deals with "Last Known Taxon" at its most granular level, so LKT__g__Clostridium means
+    #"a species, which is unknown at the species level, but belongs to the Clostridium genus". This is not to be confused with
+    #the feature g__Clostridium, which is the sum of all LKT features which belong to the genus Clostridium.
+
     Volcano_Stats$Taxon[which(Volcano_Stats$Taxon == "LKT__g__Roseburia")] <- "LKT__Unclassified_Roseburia_bacterium"
     Volcano_Stats$Taxon[which(Volcano_Stats$Taxon == "LKT__g__Clostridium")] <- "LKT__Unclassified_Clostridium_bacterium"
     Volcano_Stats$Taxon[which(Volcano_Stats$Taxon == "LKT__g__Ruminococcus")] <- "LKT__Unclassified_Ruminococcus_bacterium"
@@ -106,4 +111,4 @@ for (Wanted_Samples_object_name in c("Samples_All", "Samples_antiPD1")){
 dev.off()
 
 ```
-[Supplementary Fig S2 C and D pdf output](../pdfs/Supplementary_Fig_S2A.pdf)
+[Supplementary Fig S2 C and D pdf output](../pdfs/Supplementary_Fig_S2_C_and_D.pdf)
