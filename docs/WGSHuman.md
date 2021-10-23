@@ -43,6 +43,8 @@ dev.off()
 [Supplementary Figure 2 A pdf output](../pdfs/Supplementary_Fig_S2A.pdf)
 
 
+
+
 ### Code for Supplementary Figure 2 panels C and D
 For plotting the volcano plots on Supplementary figure 2 panels C and D, we can use a _for_ loop to generate two volcano plots, one for all samples (C) and one only for anti-PD1 samples (D)
 
@@ -118,6 +120,7 @@ dev.off()
 
 
 
+
 ### Code for Supplementary Figure 2 panel E
 This will plot the Inverse Simpson index for each sample for Responders and Non-Responders within the validation cohort of 111 patients.
 
@@ -131,6 +134,7 @@ pdf("Supplementary_Fig_S2_E.pdf", paper = "a4r")
 dev.off()
 ```
 [Supplementary Fig S2 E pdf output](../pdfs/Supplementary_Fig_S2_E.pdf)
+
 
 
 
