@@ -17,6 +17,9 @@ Samples_antiPD1 <- subset(pheno, treatment == "anti-PD1")[]$Sample
 #Validation samples were defined as anti-PD1 treatment which were not in the previous Science2018 cohort, n=111
 Samples_Validation <- pheno$Sample[intersect(which(pheno$treatment == "anti-PD1"), which(pheno$sci2018 == "N_A"))]
 
+#Samples with probiotics information
+Samples_Probiotics <- subset(pheno, probiotics %in% c("Yes", "No"))[]$Sample
+
 ```
 
 Now that we have these useful objects, we can proceed to actual plotting.
@@ -152,3 +155,21 @@ for (pcc in c(FALSE, TRUE)){
 dev.off()
 ```
 [Supplementary Fig S2 F pdf output](../pdfs/Supplementary_Fig_S2_F.pdf)
+
+
+### Code for Supplementary Figure 5 panel E
+This will plot a heatmap of gene annotation features (gene product name, as annotated by PROKKA) which are significantly (p < 0.05) between patients who took probiotics n=30 and those who did not n=80.
+
+```R
+pdf("Supplementary_Fig_S5_E.pdf", paper = "a4r")
+
+plot_relabund_heatmap(ExpObj = expvec[["Product"]], samplesToKeep = Samples_Probiotics, hmtype = "comparative",
+                     compareby = "probiotics", invertbinaryorder = TRUE, splitcolsby = "probiotics",
+                     column_split_group_order = c("No", "Yes"), colcategories = "probiotics", featcutoff = c(50, 20),
+                     minl2fc = 1, fun_for_l2fc = "geom_mean", showonlypbelow = 0.05, scaled = FALSE, cdict = cdict,
+                     class_to_ignore = "N_A", no_underscores = TRUE)
+
+dev.off()
+```
+
+[Supplementary Fig S5 E pdf output](../pdfs/Supplementary_Fig_S5_E.pdf)
