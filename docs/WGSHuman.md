@@ -124,8 +124,26 @@ This will plot the Inverse Simpson index for each sample for Responders and Non-
 ```R
 pdf("Supplementary_Fig_S2_E.pdf", paper = "a4r")
 
-    print(plot_alpha_diversity(ExpObj = expvec[["LKT"]], measures = "InvSimpson", stratify_by_kingdoms = TRUE, samplesToKeep = Samples_Validation, compareby = "response", fillby = "response", applyfilters = "light", cdict = cdict))
+    print(plot_alpha_diversity(ExpObj = expvec[["LKT"]], measures = "InvSimpson", stratify_by_kingdoms = TRUE,
+          samplesToKeep = Samples_Validation, compareby = "response", fillby = "response", applyfilters = "light",
+          cdict = cdict))
 
 dev.off()
 ```
 [Supplementary Fig S2 E pdf output](../pdfs/Supplementary_Fig_S2_E.pdf)
+
+
+
+### Code for Supplementary Figure 2 panel E
+This will yield an ordination plot using UMAP coloured in by Responders and Non-Responders within all 167 samples, and calculating the PERMANOVA value between these groups.
+
+```R
+pdf("Supplementary_Fig_S2_F.pdf", paper = "a4r")
+for (pcc in c(FALSE, TRUE)){
+    print(plot_Ordination(ExpObj = expvec[["LKT"]], algorithm = "tUMAP", distmethod = "bray", compareby = "response",
+          colourby = "response", ellipseby = NULL, sizeby = NULL, pairby = NULL, textby = NULL, dotsize = 1.3,
+          dotborder = NULL, log2tran = TRUE, transp = TRUE, perplx = NULL, max_neighbors = 15, permanova = TRUE,
+          plotcentroids = pcc, cdict = cdict, grid = FALSE, forceaspectratio = 1))
+}
+dev.off()
+```
