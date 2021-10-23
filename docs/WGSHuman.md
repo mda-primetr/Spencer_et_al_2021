@@ -17,4 +17,4 @@ dev.off()
 
 ```
 
-![FigS2A](../images/Supplementary_Fig_S2A.pdf)
+[FigS2A pdf output](../pdfs/Supplementary_Fig_S2A.pdf)
