@@ -185,7 +185,13 @@ This will plot a heatmap of gene annotation features (gene product name, as anno
 ```R
 pdf("Supplementary_Fig_S10_E.pdf", paper = "a4r")
 
-plot_relabund_heatmap(ExpObj = expvec[["Product"]], samplesToKeep = Samples_Fiber, hmtype = "comparative", compareby = "fiber_cat", invertbinaryorder = TRUE, splitcolsby = "fiber_cat", column_split_group_order = c("Insufficient_intake", "Sufficient_intake"), colcategories = "fiber_cat", featcutoff = c(50, 20), minl2fc = 1, fun_for_l2fc = "geom_mean", showonlypbelow = 0.05, scaled = FALSE, cdict = cdict, class_to_ignore = "N_A", no_underscores = TRUE)
+plot_relabund_heatmap(ExpObj = expvec[["Product"]], samplesToKeep = Samples_Fiber, hmtype = "comparative",
+                      compareby = "fiber_cat", invertbinaryorder = TRUE, splitcolsby = "fiber_cat",
+                      column_split_group_order = c("Insufficient_intake", "Sufficient_intake"), colcategories = "fiber_cat", featcutoff = c(50, 20),
+                      minl2fc = 1, fun_for_l2fc = "geom_mean", showonlypbelow = 0.05, scaled = FALSE, cdict = cdict, class_to_ignore = "N_A",
+                      no_underscores = TRUE)
 
 dev.off()
 ```
+
+[Supplementary Fig S10 E pdf output](../pdfs/Supplementary_Fig_S10_E.pdf)
