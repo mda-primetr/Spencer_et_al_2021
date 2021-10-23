@@ -8,11 +8,13 @@ From this, it is easy to create character vectors with the names of samples cont
 
 pheno <- as.data.frame(colData(expvec$LKT))
 
+#Vector of all samples, n=167
 Samples_All <- rownames(pheno)
 
+#Vector of all samples, n=133
 Samples_antiPD1 <- subset(pheno, treatment == "anti-PD1")[]$Sample
 
-#Validation samples were defined as anti-PD1 treatment which were not in the previous Science2018 cohort.
+#Validation samples were defined as anti-PD1 treatment which were not in the previous Science2018 cohort, n=111
 Samples_Validation <- pheno$Sample[intersect(which(pheno$treatment == "anti-PD1"), which(pheno$sci2018 == "N_A"))]
 
 ```
@@ -112,3 +114,18 @@ dev.off()
 
 ```
 [Supplementary Fig S2 C and D pdf output](../pdfs/Supplementary_Fig_S2_C_and_D.pdf)
+
+
+
+
+### Code for Supplementary Figure 2 panel E
+This will plot the Inverse Simpson index for each sample for Responders and Non-Responders within the validation cohort of 111 patients.
+
+```R
+pdf("Supplementary_Fig_S2_E.pdf", paper = "a4r")
+
+    print(plot_alpha_diversity(ExpObj = expvec[["LKT"]], measures = "InvSimpson", stratify_by_kingdoms = TRUE, samplesToKeep = Samples_Validation, compareby = "response", fillby = "response", applyfilters = "light", cdict = cdict))
+
+dev.off()
+```
+[Supplementary Fig S2 E pdf output](../pdfs/Supplementary_Fig_S2_E.pdf)
