@@ -28,7 +28,10 @@ dev.off()
 ```R
 pdf("Supplementary_Fig_S14_B.pdf", paper = "a4r")
 
-plot_relabund_heatmap(ExpObj = expvec[["LKT"]], hmtype = "comparative", compareby = "Diet", invertbinaryorder = TRUE, splitcolsby = NULL, colcategories = c("Vendor", "Diet", "Treatment"), secondaryheatmap = NULL, applyfilters = "moderate", fun_for_l2fc = "geom_mean", showonlypbelow = 0.05, minl2fc = 1.5, adjustpval = TRUE, scaled = FALSE, cdict = cdict, class_to_ignore = "N_A", no_underscores = TRUE)
+plot_relabund_heatmap(ExpObj = expvec[["LKT"]], hmtype = "comparative", compareby = "Diet", invertbinaryorder = TRUE,
+                     splitcolsby = NULL, colcategories = c("Vendor", "Diet", "Treatment"), secondaryheatmap = NULL,
+                     applyfilters = "moderate", fun_for_l2fc = "geom_mean", showonlypbelow = 0.05, minl2fc = 1.5,
+                     adjustpval = TRUE, scaled = FALSE, cdict = cdict, class_to_ignore = "N_A", no_underscores = TRUE)
 
 dev.off()
 ```
@@ -39,7 +42,11 @@ dev.off()
 ```R
 pdf("Supplementary_Fig_S14_C.pdf", paper = "a4r")
 
-plot_relabund_heatmap(ExpObj = expvec[["GO"]], hmtype = "comparative", compareby = "Diet", invertbinaryorder = TRUE, splitcolsby = NULL, colcategories = c("Vendor", "Diet", "Treatment"), secondaryheatmap = NULL, applyfilters = NULL, featcutoff = c(70, 5), minl2fc = 2, fun_for_l2fc = "geom_mean", showonlypbelow = 0.05, adjustpval = TRUE, scaled = FALSE, cdict = cdict, class_to_ignore = "N_A", no_underscores = TRUE)
+plot_relabund_heatmap(ExpObj = expvec[["GO"]], hmtype = "comparative", compareby = "Diet", invertbinaryorder = TRUE,
+                      splitcolsby = NULL, colcategories = c("Vendor", "Diet", "Treatment"), secondaryheatmap = NULL,
+                      applyfilters = NULL, featcutoff = c(70, 5), minl2fc = 2, fun_for_l2fc = "geom_mean",
+                      showonlypbelow = 0.05, adjustpval = TRUE, scaled = FALSE, cdict = cdict, class_to_ignore = "N_A",
+                      no_underscores = TRUE)
 
 dev.off()
 ```
