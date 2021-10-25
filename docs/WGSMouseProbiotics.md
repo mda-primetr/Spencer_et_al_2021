@@ -17,7 +17,10 @@ Now that we have these useful objects, we can proceed to actual plotting.
 ```R
 pdf("Fig_2_D.pdf", paper = "a4r")
 
-print(plot_alpha_diversity(ExpObj = expvec[["LKT"]], measures = "InvSimpson", stratify_by_kingdoms = TRUE, samplesToKeep = Samples_Poop4, compareby = "Probiotic", compareby_order = c("Water", "Probiotic 1 (Bifidobacterium) ", "Probiotic 2 (Lactobacillus) "), colourby = NULL, applyfilters = "light", cdict = cdict, class_to_ignore = "N_A"))
+print(plot_alpha_diversity(ExpObj = expvec[["LKT"]], measures = "InvSimpson",
+      stratify_by_kingdoms = TRUE, samplesToKeep = Samples_Poop4, compareby = "Probiotic",
+      compareby_order = c("Water", "Probiotic 1 (Bifidobacterium) ", "Probiotic 2 (Lactobacillus) "),
+      colourby = NULL, applyfilters = "light", cdict = cdict, class_to_ignore = "N_A"))
 
 dev.off()
 ```
@@ -31,7 +34,10 @@ dev.off()
 ```R
 pdf("Fig_2_E.pdf", paper = "a4r")
 for(algo in c("PCA", "tUMAP")){
-    print(plot_Ordination(ExpObj = expvec[["LKT"]], samplesToKeep = NULL, algorithm = algo, distmethod = "bray", compareby = "Probiotic", colourby = "Probiotic", pairby = NULL, textby = NULL, dotsize = 1.3, plotcentroids = TRUE, cdict = cdict, grid = FALSE, forceaspectratio = 1))
+    print(plot_Ordination(ExpObj = expvec[["LKT"]], samplesToKeep = NULL, algorithm = algo,
+    distmethod = "bray", compareby = "Probiotic", colourby = "Probiotic", pairby = NULL,
+    textby = NULL, dotsize = 1.3, plotcentroids = TRUE, cdict = cdict, grid = FALSE,
+    forceaspectratio = 1))
 }
 dev.off()
 ```
