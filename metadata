@@ -1,0 +1,5 @@
+The metadata is deposited in SRA. 
+
+https://trace.ncbi.nlm.nih.gov/Traces/study1/?acc=PRJNA770295
+
+Click the 'RunInfo Table' download button (there are separate buttons for the 'total' dataset and just the 'selected' subset, depending on which you need), it should include all sample metadata in the resulting spreadsheet.
