@@ -200,7 +200,7 @@ dev.off()
 The feature table (relative abundances of features by samples) for the human samples can be found in spreadsheet format on the link below:
 [Human Microbiome Feature Tables](../data/PD1_Wargo_Human_WGS_Relabund_and_metadata_light_filtering.xlsx)
 
-Different information for different aspects of samples can be found on different tabs. The following tabs are available on the spreadsheet, according to the table below.
+Different information for different aspects of samples can be found on different tabs. The following tabs are available on the spreadsheet, as explained in the table below.
 
 | Tab name | Description |
 | --- | --- |
@@ -218,3 +218,5 @@ Different information for different aspects of samples can be found on different
 | Interpro_featuretable | Functional description of each unique Interpro accession |
 | GO_PPM | **Relative abundances** of bases covering CDSs belonging to each unique GO ([Gene Ontology](https://en.wikipedia.org/wiki/Gene_Ontology)) accession, annotated with [Interproscan](https://www.ebi.ac.uk/interpro/about/interpro/), in Parts Per Million (PPM) |
 | GO_featuretable | Functional description (term) of each unique [Gene Ontology](https://en.wikipedia.org/wiki/Gene_Ontology) accession |
+
+Note that for LKT features, only LKTs > 50 PPM in at least 5 % of samples were included; for all functional features (i.e. non-taxonomical features), only features > 5 PPM in at least 5 % of samples were included.
