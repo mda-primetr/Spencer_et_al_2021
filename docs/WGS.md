@@ -8,10 +8,12 @@ These jamsfiles (one for each sample) are then used, together with metadata, to 
 
 
 ### Pre-analysis of samples starting from fastqs.
-
+In order to run fastqs for a single sample through JAMSalpha, use the JAMSalpha command on bash, with one line per sample, as in the example below:
 ```bash
 JAMSalpha -f /path/to/forward/Sample_R1.fastq -r /path/to/reverse/Sample_R2.fastq -d /path/to/JAMSdb/JAMSdbApr2020_96Gbk2db -A metagenome -p SamplePrefix
 ```
+
+The database used for this paper was built in April2020 and can be found [here](https://hpc.nih.gov/~mccullochja/JAMSdbApr2020_32Gbk2db.tar.gz). Please note that other more recent JAMS-compatible kraken2 databases are now available.
 
 ### Comparison between samples
 #### Building a feature table using the outputs from JAMSalpha
@@ -25,8 +27,8 @@ This will create an R-session image (.RData) containing [SummarizedExperiment](h
 
 On this paper, shotgun metagenome sequencing of fecal samples was used for evaluating three kinds of samples. Click below for the code used and associated figures in each category:
 
-#### [Human samples](./WGSHuman.md)
+### [Human samples](./WGSHuman.md)
 
-#### [Samples from mice submitted to different diets](./WGSMouseDiet.md)
+### [Samples from mice submitted to different diets](./WGSMouseDiet.md)
 
-#### [Samples from mice exposed to different probiotics](./WGSMouseProbiotics.md)
+### [Samples from mice exposed to different probiotics](./WGSMouseProbiotics.md)
