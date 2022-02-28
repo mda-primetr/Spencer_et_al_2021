@@ -195,3 +195,26 @@ dev.off()
 ```
 
 [Supplementary Fig S10 E pdf output](../pdfs/Supplementary_Fig_S10_E.pdf)
+
+### Feature table
+The feature table (relative abundances of features by samples) for the human samples can be found in spreadsheet format on the link below:
+[Human Microbiome Feature Tables](../data/PD1_Wargo_Human_WGS_Relabund_and_metadata_light_filtering.xlsx)
+
+Different information for different aspects of samples can be found on different tabs. The following tabs are available on the spreadsheet, according to the table below.
+
+| Tab name | Description |
+| --- | --- |
+| Metadata | Metadata for all samples |
+| LKT_PPM | **Relative abundances** of Last Known Taxon features (lowest taxon known for a feature, up to species), in Parts Per Million (PPM) |
+| LKT_Genome_Completeness | Estimated genomic completeness of a feature, as a 0 to 1 ratio. For example a value of 0.92 for LKT__s__Bifidobacterium_longum means that in that sample, contigs classified as belonging to LKT__s__Bifidobacterium_longum add up to 92% of the median genome size expected for that species. |
+| LKT_featuretable | Taxonomically hierarchical table with Domain, Kingdom, Phylum, Class, Order, Genus and Species for each Last Known Taxon (LKT) feature. |
+| ECNumber_PPM | **Relative abundances** of bases covering CDSs belonging to each Enzyme Commission Number (annotated with [PROKKA](https://github.com/tseemann/prokka)), in Parts Per Million (PPM) |
+| ECNumber_featuretable | Functional description of each Enzyme Commission Number |
+| Product_PPM | **Relative abundances** of bases covering CDSs belonging to each CDS product annotation (annotated with [PROKKA](https://github.com/tseemann/prokka)), in Parts Per Million (PPM) |
+| Product_featuretable | Functional description of each CDS product annotation  |
+| Pfam_PPM | **Relative abundances** of bases covering CDSs belonging to each Protein family (Pfam), annotated with [Interproscan](https://www.ebi.ac.uk/interpro/about/interpro/), in Parts Per Million (PPM) |
+| Pfam_featuretable | Functional description of each Protein family (Pfam)  |
+| Interpro_PPM | **Relative abundances** of bases covering CDSs belonging to each unique Interpro accession, annotated with [Interproscan](https://www.ebi.ac.uk/interpro/about/interpro/), in Parts Per Million (PPM) |
+| Interpro_featuretable | Functional description of each unique Interpro accession |
+| GO_PPM | **Relative abundances** of bases covering CDSs belonging to each unique GO ([Gene Ontology](https://en.wikipedia.org/wiki/Gene_Ontology)) accession, annotated with [Interproscan](https://www.ebi.ac.uk/interpro/about/interpro/), in Parts Per Million (PPM) |
+| GO_featuretable | Functional description (term) of each unique [Gene Ontology](https://en.wikipedia.org/wiki/Gene_Ontology) accession |
