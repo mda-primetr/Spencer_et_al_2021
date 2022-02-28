@@ -197,10 +197,10 @@ dev.off()
 [Supplementary Fig S10 E pdf output](../pdfs/Supplementary_Fig_S10_E.pdf)
 
 ### Feature table
-The feature table (relative abundances of features by samples) for the human samples can be found in spreadsheet format on the link below:
-[Human Microbiome Feature Tables](../data/PD1_Wargo_Human_WGS_Relabund_and_metadata_light_filtering.xlsx)
+The feature table (relative abundances of features by samples) for the human samples can be found in spreadsheet format on this link:
+[Human Microbiome Feature Tables](../data/PD1_Wargo_Human_WGS_Relabund_and_metadata_light_filtering.xlsx) (**right-click on this link and Save Link As...**)
 
-Different information for different aspects of samples can be found on different tabs. The following tabs are available on the spreadsheet, as explained in the table below.
+Different aspects of samples can be found on different tabs within the spreadsheet. The following tabs are available, as explained in the table below.
 
 | Tab name | Description |
 | --- | --- |
